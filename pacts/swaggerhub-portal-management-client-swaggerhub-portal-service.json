@@ -1,0 +1,60 @@
+{
+  "consumer": {
+    "name": "swaggerhub-portal-management-client"
+  },
+  "interactions": [
+    {
+      "description": "a request to check an api connection exists",
+      "pending": false,
+      "request": {
+        "headers": {
+          "Authorization": [
+            "Bearer Foo"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "method": "GET",
+        "path": "/portals",
+        "query": {
+          "subdomain": [
+            "fooSubDomain"
+          ]
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "content": {
+            "items": [
+              {
+                "id": "foo"
+              }
+            ]
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.23",
+      "models": "1.2.5"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "swaggerhub-portal-service"
+  }
+}
